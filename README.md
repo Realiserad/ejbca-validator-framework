@@ -73,6 +73,6 @@ sudo chmod +x cert-validator.sh
 ```
 
 ## Enable external scripts
-Open EJBCA admin web in a browser, log in as CA Administrator and navigate to `System Configuration -> External Scripts`.
+Open EJBCA admin web in a browser, log in as CA Administrator and navigate to `System Configuration -> External Scripts`. Check "Validate" and "Use the whitelist below". In the textbox type `/opt/wildfly/scripts/cert-validator.sh`and click on "Validate" to make sure the script is available and can be read by EJBCA. Finally click on "Save" to save the configuration. 
 
 ![External Scripts Configuration](https://image.ibb.co/cvjByJ/Screenshot_from_2018_05_27_23_46_09.png "Enable External Scripts in EJBCA")

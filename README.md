@@ -88,4 +88,4 @@ In the **Test Certificate Path** section, click `Browse...` and upload a dummy c
 
 Click on **Test Command** to test the validator and click on **Save**.
 
-![External Command Certificate Validator Configuration](https://image.ibb.co/cvjByJ/Screenshot_from_2018_05_27_23_46_09.png "Configuration of an External Command Certificate Validator for hostname validation")
+![External Command Certificate Validator Configuration](https://image.ibb.co/hZ7EJJ/Screenshot_from_2018_05_28_00_31_25.png "Configuration of an External Command Certificate Validator for hostname validation")

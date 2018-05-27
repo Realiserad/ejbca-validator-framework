@@ -76,3 +76,14 @@ sudo chmod +x cert-validator.sh
 Open EJBCA admin web in a browser, log in as CA Administrator and navigate to `System Configuration -> External Scripts`. Check "Validate" and "Use the whitelist below". In the textbox type `/opt/wildfly/scripts/cert-validator.sh`and click on "Validate" to make sure the script is available and can be read by EJBCA. Finally click on "Save" to save the configuration. 
 
 ![External Scripts Configuration](https://image.ibb.co/cvjByJ/Screenshot_from_2018_05_27_23_46_09.png "Enable External Scripts in EJBCA")
+
+## Create an External Command Certificate Validator
+As an example we are creating a validator which ensures that the Common Name of the certificate is a valid hostname. Navigate to `Validators`and add a new validator called `Hostname Validator`. Click on the `Edit`button to edit your new validator. Make the following adjustments:
+
+1. **Validator Type** should be `External Command Certificate Validator` 
+2. **Full pathname of script** should be set to `/opt/wildfly/scripts/cert-validator.sh %cert +isHostname=CN`
+3. **Issuance phase** should be set to `Certificate Validation`
+
+In the **Test Certificate Path** section, click `Browse...` and upload a dummy certificate.
+
+Click on **Test Command** to test the validator and click on **Save**.

@@ -87,3 +87,5 @@ As an example we are creating a validator which ensures that the Common Name of 
 In the **Test Certificate Path** section, click `Browse...` and upload a dummy certificate.
 
 Click on **Test Command** to test the validator and click on **Save**.
+
+![External Command Certificate Validator Configuration](https://image.ibb.co/cvjByJ/Screenshot_from_2018_05_27_23_46_09.png "Configuration of an External Command Certificate Validator for hostname validation")

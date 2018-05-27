@@ -45,36 +45,6 @@ import org.ejbca.validator.module.ValidatorModuleFactory;
  * of the execution determines if the validator succeeded or not, where a
  * non-zero exit status means a validation failure occurred in one of the
  * modules.
- * <p>
- * Usage:
- * <code>java -jar cert-validator.jar [<strong>type</strong>...] {-|+}<strong>module</strong>=<strong>part</strong>[,<strong>part</strong>]...</code>
- * <p>
- * <code>type</code> should be one of the following
- * <ul>
- * <li><code>x509</code> Perform validation of an X.509 certificate</li>
- * </ul>
- * <p>
- * <code>module</code> should be one of the following
- * <ul>
- * <li><code>isHostname</code> Checks if the data is a valid hostname.</li>
- * </ul>
- * <p>
- * The behaviour of a module can be toggled using a plus or minus sign in front
- * of the module name, i.e. -module means the module should fail if the data was
- * validated successfully and +module means the module should succeed if the
- * data was validated successfully.
- * <p>
- * <code>part</code> specifies the part of the certificate to validate and
- * should be one of the following:
- * <ul>
- * <li><code>CN</code> The Common Name of the Distinguished Name
- * </ul>
- * <p>
- * <h1>Examples:</h1>
- * <p>
- * A validation of an X.509 certificate which succeeds iff the Common Name is
- * present and NOT a valid hostname</br>
- * <code>java -jar cert-validator.jar x509 -isHostname=CN</code>
  */
 public class ExternalCertificateValidator {
     private static final Logger log = LogManager.getLogger();

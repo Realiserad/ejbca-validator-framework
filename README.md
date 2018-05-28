@@ -100,4 +100,10 @@ Select **Hostname Validator** in the **Other data -> Validators** section and cl
 Log4j is used for logging. The logging configuration provided in the repository logs on DEBUG level to stdout. If you want to customise logging, you can edit the file `log4j2.xml` located in `src/main/resources`.
 
 Here is an example of what the default log output looks like:
-> TODO
+> 2018-05-28 09:07:03 INFO  ExternalCertificateValidator:54 - Starting External Certificate Validator
+> 2018-05-28 09:07:04 INFO  ExternalCertificateValidator:80 - Loaded certificate with serial number 4986927498727197227
+> 2018-05-28 09:07:04 DEBUG ModuleExecutor:49 - Validating CN data '[nautilus]' in certificate using +isHostname module
+> 2018-05-28 09:07:04 DEBUG ModuleExecutor:52 - Validation results: 
+> nautilus: true
+> 2018-05-28 09:07:04 INFO  ExternalCertificateValidator:89 - Certificate with serial number 4986927498727197227 passed validation.
+

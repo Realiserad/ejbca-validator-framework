@@ -63,7 +63,7 @@ Create a script which will be invoked by EJBCA
 ```
 cd /opt/wildfly/scripts
 echo '#!/bin/bash' > cert-validator.sh
-echo 'java -jar cert-validator.jar "$@"' >> cert-validator.sh
+echo 'java -jar /opt/wildfly/scripts/cert-validator.jar "$@"' >> cert-validator.sh
 ```
 Change owner of cert-validator.jar to wildfly user and make the script executable
 ```
@@ -90,3 +90,14 @@ In the **Test Certificate Path** section, click `Browse...` and upload a dummy c
 Click on **Test Command** to test the validator and click on **Save**.
 
 ![External Command Certificate Validator Configuration](https://image.ibb.co/gAYNoJ/screenshot3.png "Configuration of an External Command Certificate Validator for hostname validation")
+
+## Enable the validator in your CA
+Navigate to ``Certification Authorities``, select your CA in the list of CAs and click **Edit**.
+
+Select **Hostname Validator** in the **Other data -> Validators** section and click **Save**.
+
+# Configure logging
+Log4j is used for logging. The logging configuration provided in the repository logs on DEBUG level to stdout. If you want to customise logging, you can edit the file `log4j2.xml` located in `src/main/resources`.
+
+Here is an example of what the default log output looks like:
+> 

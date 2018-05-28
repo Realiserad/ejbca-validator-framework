@@ -107,3 +107,5 @@ Here is an example of what the default log output looks like:
 > nautilus: true
 > 2018-05-28 09:07:04 INFO  ExternalCertificateValidator:89 - Certificate with serial number 4986927498727197227 passed validation.
 
+# Request functionality
+Almost no functionality is implemented at this point. You're most welcome to create a pull request or request new functionality by creating an issue.

@@ -83,10 +83,10 @@ public class ExternalCertificateValidator {
             final List<ModuleExecutor> moduleExecutors = validatorModuleFactory.fromCommandLine(argsList);
             final boolean validationOk = new ExternalCertificateValidator(moduleExecutors).run();
             if (!validationOk) {
-                log.info("Certificate with serial number {} failed validation.", serialNumber);
+                log.info("Certificate with serial number {} failed validation.", serialNumber.toString(16));
                 System.exit(-1);
             } else {
-                log.info("Certificate with serial number {} passed validation.", serialNumber);
+                log.info("Certificate with serial number {} passed validation.", serialNumber.toString(16));
                 System.exit(0);
             }
         } catch (final CertificateException e) {

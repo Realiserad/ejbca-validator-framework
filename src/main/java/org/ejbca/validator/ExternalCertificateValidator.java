@@ -68,7 +68,7 @@ public class ExternalCertificateValidator {
         if ("x509".equals(type)) {
             validateX509Certificate(argsList.stream().skip(1).collect(Collectors.toList()));
         } else {
-            log.error("Requested validation of unsupported certificate type {}.");
+            log.error("Requested validation of unsupported certificate type {}.", type);
             System.exit(1);
         }
     }

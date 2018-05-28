@@ -100,4 +100,4 @@ Select **Hostname Validator** in the **Other data -> Validators** section and cl
 Log4j is used for logging. The logging configuration provided in the repository logs on DEBUG level to stdout. If you want to customise logging, you can edit the file `log4j2.xml` located in `src/main/resources`.
 
 Here is an example of what the default log output looks like:
-> 
+> TODO

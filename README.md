@@ -81,11 +81,12 @@ Open EJBCA admin web in a browser, log in as CA Administrator and navigate to `S
 As an example we are creating a validator which ensures that the Common Name of the certificate is a valid hostname. Navigate to `Validators`and add a new validator called `Hostname Validator`. Click on the `Edit`button to edit your new validator. Make the following adjustments:
 
 1. **Validator Type** should be `External Command Certificate Validator` 
-2. **Full pathname of script** should be set to `/opt/wildfly/scripts/cert-validator.sh %cert +isHostname=CN`
+2. **Full pathname of script** should be set to `/opt/wildfly/scripts/cert-validator.sh x509 %cert% +isHostname=CN`
 3. **Issuance phase** should be set to `Certificate Validation`
+4. Select the **Certificate Profiles** you want the validator to act on, or check **Apply for all certificate profiles** if you want to use the validator for all certificate profiles. 
 
 In the **Test Certificate Path** section, click `Browse...` and upload a dummy certificate.
 
 Click on **Test Command** to test the validator and click on **Save**.
 
-![External Command Certificate Validator Configuration](https://image.ibb.co/hZ7EJJ/Screenshot_from_2018_05_28_00_31_25.png "Configuration of an External Command Certificate Validator for hostname validation")
+![External Command Certificate Validator Configuration](https://image.ibb.co/gAYNoJ/screenshot3.png "Configuration of an External Command Certificate Validator for hostname validation")

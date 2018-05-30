@@ -84,7 +84,7 @@ public class ExternalCertificateValidator {
             final boolean validationOk = new ExternalCertificateValidator(moduleExecutors).run();
             if (!validationOk) {
                 log.info("Certificate with serial number {} failed validation.", serialNumber.toString(16));
-                System.exit(-1);
+                System.exit(100);
             } else {
                 log.info("Certificate with serial number {} passed validation.", serialNumber.toString(16));
                 System.exit(0);

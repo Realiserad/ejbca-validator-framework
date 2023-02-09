@@ -2,7 +2,7 @@
 
 External Command Certificate Validators was introduced in EJBCA Enterprise 6.11 and runs on either a certificate or pre-certificate object and calls a script on the local filesystem.
 
-cert-validator is a framework for creating your own Java-based certificate validator which can be invoked by EJBCA.
+``ejbca-validator-framework`` is a framework for creating your own Java-based certificate validator which can be invoked by EJBCA.
 
 For more information about External Command Certificate Validators in EJBCA, consult the [EJBCA documentation](https://www.ejbca.org/docs/Post_Processing_Validators.html).
 
